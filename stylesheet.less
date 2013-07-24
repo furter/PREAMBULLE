@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:visited, a:hover, a:active, a:link {
+    color:#000000; 
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    page-break-inside:avoid;
+}
+footer {
+    position: fixed;
+    bottom:0px;
+    height: 60px;
+    left: 0;
+    right: 0;
+    background: white;
+}
+@font-face {
+    font-family:'Logisoso';
+    src: url("font/Logisosololo.otf");
+    src: url('font/logisosololo-webfont.eot');
+    src: url('font/logisosololo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/logisosololo-webfont.woff') format('woff'),
+         url('font/logisosololo-webfont.ttf') format('truetype'),
+         url('font/logisosololo-webfont.svg#logisosomedium') format('svg');
+    font-style: normal;
+}
+
+body {
+    font-family:'Logisoso';
+    font-size: 26px;
+    color:black;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+}
+
+h1 {
+    font-family:'Logisoso';
+    font-size: 110px;
+    color:black;
+    text-align: center;
+}
+
+//numbers
+h2 {
+    font-family:'Logisoso';
+    font-size: 200px;
+    color:black;
+}
+.box {
+    margin: 10px;
+    padding: 7px 13px 10px 10px;
+    border: 3px solid black;
+    float: left;
+    position: relative;
+}
+.box-image {
+    margin: 10px;
+    padding: 8px;
+    border: 3px solid black;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.box-in-box {
+    margin: 5px 5px 5px 5px;
+    padding: 7px 8px 7px 7px;
+    border: 3px solid black;
+    float: right;
+    background-color: white;
+    position: absolute;
+}
+.box-footer {
+    position: fixed;
+    bottom: 15px;
+}
+.box-form {
+    padding:15px;
+    font-size: 20px;
+}
+.box-progr {
+    padding:8px 8px 8px 12px;
+    font-size: 20px;
+    overflow: hidden;
+}
+.box3D {
+    margin: 10px;
+    padding: 0px;
+    width: 203px;
+    height: 222px;
+    position: relative;
+    float: left;
+    background-image: url("/images/box3D.png");
+    font-size: 20px;
+}
+// IMAGES
+.img-bulles {
+    width: 100px;
+    position: absolute;
+    right: 1px; 
+    bottom: 0px; 
+    z-index: -10;
+}
+
+
+
+@pagewidth: 650px; /*corresponds to the A4 print surface*/
+@pageheight: 950px; /*corresponds to the A4 print surface*/
+@margin: 10px; /*corresponds to the .box(es) margin*/
+@gutter: 2 * @margin;
+
+// concerns all images included in "a-half-col"divs
+.a-half-col img {
+    width: 280px;
+    z-index: -600;
+}
+.only-one-rank {
+    height: @pageheight; /*1/1 case in the vertical sense*/
+    float: left;
+}
+.a-half-rank {
+    height: (@pageheight - @gutter) / 2; /*1/2 case in the vertical sense*/
+    float: left;
+}
+.a-third-rank {
+    height: (@pageheight - 2*@gutter) / 3; /*1/3 case in the vertical sense*/
+    float: left;
+}
+.a-fourth-rank {
+    height: (@pageheight - 3*@gutter) / 4; /*1/4 case in the vertical sense*/
+    float: left;
+}
+.a-fifth-rank {
+    height: (@pageheight - 4*@gutter) / 5; /*1/5 case in the vertical sense*/
+    float: left;
+}
+.a-sixth-rank {
+    height: (@pageheight - 5*@gutter) / 6; /*1/6 case in the vertical sense*/
+    float: left;
+}
+.only-one-col {
+    width: @pagewidth; /*1/1 case in the horizontal sense*/
+    float: left;
+}
+.a-half-col {
+    width: (@pagewidth - @gutter) / 2; /*1/2 case in the horizontal sense*/
+    float: left;
+}
+.a-third-col {
+    width: (@pagewidth - 2*@gutter) / 3; /*1/3 case in the horizontal sense*/
+    float: left;
+}
+@a-third-col: (@pagewidth - 2*@gutter) / 3;
+.a-fourth-col {
+    width: (@pagewidth - 3*@gutter) / 4; /*1/3 case in the horizontal sense*/
+    float: left;
+} /*for the title of the event*/
+@a-fourth-col: (@pagewidth - 3*@gutter) / 4;
+.three-fourth-col {
+    width: @a-fourth-col*3 + 2*@gutter;
+}
+.two-third-col {
+    width: @a-third-col*2 + @gutter;
+}
+
+
+
+//div qui ne se sépare pas pour la page archives
+.archives {
+    float: left;
+}
+// BUBBLE WITH A BORDER AND TRIANGLE
+.triangle-border {
+    position:relative;
+    border:3px solid black;
+    background:white;
+
+}
+// THE TRIANGLE
+.triangle-border:before {
+    content:"";
+    position:absolute;
+    bottom:-20px; /* value = - border-top-width - border-bottom-width */
+    left:40px; /* controls horizontal position */
+    border-width:20px 20px 0;
+    border-style:solid;
+    border-color:black transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+/* creates the smaller  triangle */
+.triangle-border:after {
+    content:"";
+    position:absolute;
+    bottom:-16px; /* value = - border-top-width - border-bottom-width */
+    left:43px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+    border-width:17px 17px 0px;
+    border-style:solid;
+    border-color:#fff transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+// BUBBLE WITH A BORDER AND TRIANGLE
+.bubble-border {
+    width:160px;
+    height: 100px;
+    -webkit-border-radius:160px;
+    -moz-border-radius:160px;
+    border-radius: 160px;
+    position:relative;
+    top: 12px;
+    right: 8px;
+    border:3px solid black;
+    background:white;
+
+}
+// THE TRIANGLE
+.bubble-border:before {
+    content:"";
+    position:absolute;
+    bottom:-20px; /* value = - border-top-width - border-bottom-width */
+    left:40px; /* controls horizontal position */
+    border-width:20px 20px 0;
+    border-style:solid;
+    border-color:black transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+/* creates the smaller  triangle */
+.bubble-border:after {
+    content:"";
+    position:absolute;
+    bottom:-16px; /* value = - border-top-width - border-bottom-width */
+    left:43px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+    border-width:17px 17px 0px;
+    border-style:solid;
+    border-color:#fff transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+// Case rond noir ^_^
+// based on the classes:  a-fourth-rank a-third-col
+// for programme
+.rond-blanc {
+    position:relative;
+    background:black;
+    height: 222px;
+    width: 203px;
+    z-index: -10;
+}
+.rond-blanc:after {
+    content:"";
+    position:absolute;
+    height: 160px;
+    width: 160px;
+    top:50%;
+    margin-top: -80px;
+    left:50%;
+    margin-left: -80px;
+    -webkit-border-radius:160px 160px;
+    -moz-border-radius:160px 160px;
+    border-radius: 160px 160px;
+    background-color: white;
+    z-index:-5;
+}
+
+
+
+// PRINT
+@media screen {
+    .print-only {
+        display:none;
+    }
+}
+@media print {
+    .screen-only {
+        display:none;
+    }
+    footer {
+        display:none;
+    }
+    #container-print {
+        width: 670px; /*I added 10px just to be sure*/
+        height: 950px;
+        page-break-after: always;
+    }
+}
+.legende-verticale {
+    font-size: 20px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+.legende {
+    font-size: 20px;
+}
+
+div.dropt2 div {
+    position: relative;
+    left: -9999px;
+    padding: 1px 3px 1px 4px;
+    border: solid 2px black;
+    font-size: 20px;
+    margin: 5px;
+}
+
+div.dropt2:hover div {
+    position: relative;
+    top: 0px;
+    left: 50%;
+    background: #ffffff;
+    z-index:6;
+}
