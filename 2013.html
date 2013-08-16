@@ -2,8 +2,8 @@
 <html>
     <head>
         <title>PRÉAMBULLE</title>
-        <link rel="shortcut icon" href="bulle.png" type="image/x-icon"/>
-        <link rel="icon" href="bulle.png" type="image/x-icon"/>
+        <link rel="shortcut icon" href="/bulle.png" type="image/x-icon"/>
+        <link rel="icon" href="/bulle.png" type="image/x-icon"/>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
         <link rel="stylesheet/less" type="text/css" href="stylesheet.less" />
         <script src="js/less-1.3.3.min.js" type="text/javascript"></script>
@@ -27,27 +27,30 @@ Depuis plusieurs années, en parallèle au Festival BD-FIL, Bibliomedia Lausanne
 <div class="box box-progr a-fourth-rank a-third-col">Les 12 et 13 septembre 2013, <br>le Préambulle accueillera l’auteur jeunesse et adulte…
 </div>
 <div class="box box-progr a-fourth-rank a-third-col">
-    <p style="font-size: 30px; margin-left: 30px; margin-top: 30px">José<br>Parrondo</p>
-    <img src="/images/programme2013/speechbubble.png" style="position: absolute; left: -5px; top: 0px; z-index: -10">
-    <img src="/images/3sheets-trans.png" style="position: absolute; bottom: -50px; right: 10px; width: 100px">
+<p style="font-size: 30px; margin-left: 30px; margin-top: 30px">José<br>Parrondo</p>
+<img src="/images/programme2013/speechbubble.png" style="position: absolute; left: -5px; top: 0px; z-index: -10">
+<img src="/images/3sheets-trans.png" style="position: absolute; bottom: -50px; right: 10px; width: 100px">
 </div>
 
-<div class="box box-progr a-fourth-rank a-third-col" style="border: none; padding: 8px 8px 30px 30px">
+<div class="box box-progr a-fourth-rank a-third-col" style="cursor: pointer; border: none; padding: 8px 8px 30px 30px" id="changeimage3">
 <object type="image/svg+xml" data="/images/boxes/3sheets.svg" style="position: absolute; left: 0px; top: 0px; z-index: -10">
 <img src="/images/boxes/3sheets.png" style="position: absolute; left: 0px; top: 0px; z-index: -10"></object>
-José Parrondo =
-<p>Auteur-illustrateur de livres aux éditions du Rouergue et à l’Association.</p>
+<div id="toggle5">José Parrondo =
+<p>Auteur-illustrateur de livres aux éditions du Rouergue et à l’Association.</p></div>
+<div id="toggle6" style="display: none"><img src="/images/programme2013/667745_f.jpg" style="height: 170px; margin-left: 25px; margin-top: 8px"></div>
 </div>
 <div class="box box-progr a-fourth-rank a-third-col">
-    <p style="margin-top: 41px; margin-left: 35px; margin-bottom: 4px">ainsi que :</p>
+<p style="margin-top: 41px; margin-left: 35px; margin-bottom: 4px">ainsi que :</p>
     <p style="font-size: 30px; margin-left: 35px; line-height: 30px">Christian Rosset</p>
     <img src="/images/programme2013/speechbubble-christian.png" style="position: absolute; left: -5px; top: 0px; z-index: -10">
 </div>
-<div class="box box-progr a-fourth-rank a-third-col" style="border: none; padding: 8px 8px 30px 30px">
+
+<div class="box box-progr a-fourth-rank a-third-col" style="cursor: pointer; border: none; padding: 8px 8px 30px 30px" id="changeimage4">
 <object type="image/svg+xml" data="/images/boxes/3sheets.svg" style="position: absolute; left: 0px; top: 0px; z-index: -10">
 <img src="/images/boxes/3sheets.png" style="position: absolute; left: 0px; top: 0px; z-index: -10"></object>
-Christian Rosset =
-<p>Producteur d’émissions sur France Culture et auteur d’essais sur la bande dessinée.</p>
+<div id="toggle10">Christian Rosset =
+<p>Producteur d’émissions sur France Culture et auteur d’essais sur la bande dessinée.</p></div>
+<div id="toggle11" style="display: none"><img src="/images/programme2013/Christian-Rosset-couv4.jpg" style="height: 170px; margin-left: 22px; margin-top: 8px"></div>
 </div>
 
 <div class="box box-progr a-fourth-rank a-third-col screen-only">
@@ -55,13 +58,15 @@ Pour deux jours de rencontres, se terminant le vendredi soir par une soirée sui
 </div>
 
 <div class="box box-progr a-fourth-rank a-third-col screen-only">
-DOCUMENTS PDF : <br><br>
+<span style="border-bottom: 2px solid black">DOCUMENTS PDF :</span><br>
 <a href="/pdf/preambulle-programme2013.pdf" target="_blank">
-<span style="border-bottom: 2px solid black">Programme 2013</span></a><br><br>
+<p style="margin-top: 15px">Programme 2013</p></a>
 <a href="/pdf/preambulle-enseignants.pdf" target="_blank">
-<span style="border-bottom: 2px solid black">Dossier enseignants</span></a><br><br>
+<p style="margin-top: 15px">Dossier enseignants</p></a>
+<a href="/pdf/Decouvertes_Parrondo.pdf" target="_blank">
+<p style="margin-top: 15px">Dossier pédagogique</p></a>
 <a href="/pdf/preambulle-matinee-pro.pdf" target="_blank">
-<span style="border-bottom: 2px solid black">Inscription matinée formation continue</span></a><br><br>
+<p style="margin-top: 15px">Inscription matinée formation continue</p></a>
 </div>
 
 <div class="box box-progr a-fourth-rank a-third-col" style="border: none">
@@ -122,23 +127,29 @@ VEN 13 SEPT 18h30
 </div>
 
 
-<div class="box box-form only-one-col" style="border: none">
+<div class="box box-form two-third-col" style="border: none">
 <br>
 Renseignements et inscriptions :<br>
 Katia Furter, Bibliomedia Suisse<br>
-Rue César-Roux 34 <a href="http://t-l.ch/">(Bus 6, 7, M2. Arrêt «&nbsp;Ours&nbsp;»)</a><br>
+Rue César-Roux 34 <br><a href="http://t-l.ch/">(Bus 6, 7, M2. Arrêt «&nbsp;Ours&nbsp;»)</a><br>
 Tél. 021 340 70 39 - Fax 021 340 70 31 <br>
 <a href="mailto:katia.furter@bibliomedia.ch">katia.furter@bibliomedia.ch</a><br>
 http://preambulle.ch/
 <br><a href="http://bibliomedia.ch/">
 <img src="/images/logobibliomediaNB.jpg" style="width: 320px; margin-top: 15px"></a>
 </div>
+<a href="/pdf/flyer-soiree2013.pdf" target="blank">
+<div class="box box-progr a-fourth-rank a-third-col screen-only"><p style="text-transform: uppercase; font-size: 40px; word-spacing: -5px; text-align: center; margin-top: 15px">et <span style="visibility: hidden">:</span><br>! bam !<br>un autre flyer</p>
+<object type="image/svg+xml" data="/images/main/bubble.svg" style="position: absolute; left: 5px; top: -2px; z-index: -30">
+<img src="/images/main/bubble.png" style="position: absolute; left: 5px; top: -2px; z-index: -30"></object>
+</div></a>
 
 </div> <!--end div container-print-->
 
 <div class="box a-fourth-rank a-third-col screen-only" style="border: none; position: absolute; top: 8px; left: 960px">
 <a href="/index.html">ACCUEIL</a><br>
 <a href="/infos.html">INFOS</a><br>
+<span style="color: blue">PROGRAMME<br>2013</span><br>
 <a href="/archives.html">ARCHIVES</a><br>
 <a href="/2012.html">←</a>
 </div>

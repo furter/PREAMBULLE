@@ -40,4 +40,12 @@ $(document).ready(function() {
                  $("#toggle3").toggle();
                  $("#toggle4").toggle();
              });
+             $("#changeimage3").click(function () {
+                 $("#toggle5").toggle();
+                 $("#toggle6").toggle();
+             });
+             $("#changeimage4").click(function () {
+                 $("#toggle10").toggle();
+                 $("#toggle11").toggle();
+             });
 });
